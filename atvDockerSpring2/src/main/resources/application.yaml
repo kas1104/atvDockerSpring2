@@ -5,9 +5,9 @@ spring:
   application:
     name: atvdockerSpring2
   datasource:
-    url: jdbc:mysql://localhost:3307/atvdocker?useSSL=false&serverTimezone=UTC&callowPublicKeyRetrival=true
-      username: kal
-      password: 123
+    url: ${SPRING_DATASOURCE_URL}
+      username: ${SPRING_DATASOURCE_USERNAME}
+      password: ${SPRING_DATASOURCE_PASSWORD}
         driver-class-name: com.atvDocker.jdbc.Driver
     jpa:
       hibernate:
