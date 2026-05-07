@@ -19,4 +19,19 @@
 #    volumes:
 #    - mysql_data:/var/lib/mysql
 #
+#
+#   app:
+#      build:
+#      container_name: api_atvdocker
+#      ports:
+#       - "8080:8080"
+#       environment:
+#           SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3307/atvdocker?useSSL=false&serverTimezone=UTC&callowPublicKeyRetrival=true
+#           SPRING_DATASOURCE_NAME: kal
+#           SPRING_DATASOURCE_PASSWORD: 123
+#           SPRING_JPA_HIBERNATE_DDL_AUTO: update
+#       depends_on:
+#         - mysql:
+#               condition: service_started  
+#
 #    volumes:mysql_data
